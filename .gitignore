@@ -1,0 +1,28 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+*.egg-info/
+.eggs/
+
+# Environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Distribution / packaging
+dist/
+build/
+*.egg
+*.whl
+
+# Editors and IDEs
+.idea/  # For PyCharm/IntelliJ
+.vscode/ # For VS Code
+*.swp
+*~
+.DS_Store # macOS system files
