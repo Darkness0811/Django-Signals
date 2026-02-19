@@ -1,7 +1,7 @@
 from django.shortcuts import render
 import threading
 import time
-from django.http import HttpResponse, JsonResponse
+from django.http import JsonResponse
 from django.db import transaction
 from .models import Item, Sales
 from .utlis.rectangle import Rectangle
@@ -22,7 +22,7 @@ def test_signal(request):
 
     print("Request total time:", end - start)
 
-    return HttpResponse("done")
+    return JsonResponse({"status": "done", "time": end-start})
 
 def async_test_signal(request):
     print("Caller thread:", threading.get_ident())
@@ -38,7 +38,7 @@ def async_test_signal(request):
 
     print("Request total time:", end - start)
 
-    return HttpResponse("done")
+    return JsonResponse({"status": "done", "time": end-start})
 
 
 
